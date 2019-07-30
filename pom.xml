@@ -21,8 +21,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <java.version>1.8</java.version>
     <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
     <thymeleaf-layout-dialect.version>2.0.4</thymeleaf-layout-dialect.version>
@@ -63,8 +63,6 @@
       <artifactId>spring-boot-devtools</artifactId>
       <optional>true</optional>
     </dependency>
-
-
     <!-- Spring Data Redis的启动器 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -82,26 +80,21 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <!-- 添加Scheduled坐标 -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context-support</artifactId>
     </dependency>
-
     <!-- Sprng tx 坐标 -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-tx</artifactId>
     </dependency>
-
     <!-- Test的启动器 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/org.springframework.jdbc -->
-
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
