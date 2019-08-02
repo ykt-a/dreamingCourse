@@ -23,7 +23,7 @@ public class TagDao {
 	}
 
 	public int getIdByName(String name) {
-		return tagMapper.selectOne(new QueryWrapper<Ykt_tag>().eq("name", name)).getId();
+		return tagMapper.selectOne(new QueryWrapper<Ykt_tag>().eq(true,"name", name)).getId();
 	}
 
 	public String getTagNameById(int id) {

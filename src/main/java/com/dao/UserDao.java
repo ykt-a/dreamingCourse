@@ -24,7 +24,7 @@ public class UserDao {
 		return userMapper.selectById(i);
 	}
 
-	public List<String> getCourseListByUid(int id){
+	public List<String> getCourseListByUid(int id) {
 		String string = userMapper.selectById(id).getCourseId();
 		return Arrays.asList(string.split("-"));
 	}

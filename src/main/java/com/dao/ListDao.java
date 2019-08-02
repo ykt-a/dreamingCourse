@@ -14,18 +14,18 @@ public class ListDao {
 	@Autowired
 	ListMapper listMapper;
 
-	public List<Ykt_list> getList(){
+	public List<Ykt_list> getList() {
 		return listMapper.selectList(null);
 	}
 
-	public Ykt_list getById(int i){
+	public Ykt_list getById(int i) {
 		return listMapper.selectById(i);
 	}
 
-	public List<Ykt_list> getByCourseId(int id){
+	public List<Ykt_list> getByCourseId(int id) {
 		QueryWrapper<Ykt_list> queryWrapper = new QueryWrapper<>();
-		queryWrapper.eq("course_id", id)
-				.eq("is_alive", 1);
+		queryWrapper.eq(true, "course_id", id)
+				.eq(true, "is_alive", 1);
 		return listMapper.selectList(queryWrapper);
 	}
 }

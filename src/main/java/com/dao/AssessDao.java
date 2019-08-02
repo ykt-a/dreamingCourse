@@ -28,8 +28,8 @@ public class AssessDao {
 		page1.setSize(20);
 		page1.setCurrent(page);
 		QueryWrapper<Ykt_assess> queryWrapper = new QueryWrapper<>();
-		queryWrapper.eq("course_id", id)
-				.eq("is_alive", 1);
+		queryWrapper.eq(true,"course_id", id)
+				.eq(true,"is_alive", 1);
 		return (Page<Ykt_assess>) assessMapper.selectPage(page1, queryWrapper);
 	}
 }
