@@ -9,13 +9,14 @@ import java.util.Date;
 
 @Data
 @Repository
-@TableName("ytk_aeesee")
+@TableName("ytk_assess")
 public class Ykt_assess{
 	private int id;
 	private int orderId;
 	private int courseId;
-	private String desc;
+	private String content;
 	private int stars;
 	private Date createTime;
 	private int isAlive;
+	private String image;
 }

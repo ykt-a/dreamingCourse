@@ -15,4 +15,5 @@ public class Ykt_list {
 	private int node;
 	private String videoLink;
 	private int isAlive;
+	private String name;
 }

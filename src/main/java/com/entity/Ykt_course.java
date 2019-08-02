@@ -25,4 +25,5 @@ public class Ykt_course {
 	private Date updateTime;
 	private int status;
 	private int isAlive;
+	private int teacherId;
 }

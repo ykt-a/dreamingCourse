@@ -13,6 +13,5 @@ public class Ykt_teacher {
 	private String tName;
 	private String tDesc;
 	private String tImage;
-	private int courcesId;
 	private int isAlive;
 }

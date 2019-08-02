@@ -1,21 +1,23 @@
 package com.service;
 
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dao.CourseDao;
 import com.dao.TagDao;
 import com.entity.Ykt_course;
 import com.entity.Ykt_tag;
-import com.model.CourseModel;
+import com.model.CourseListModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
-public class GetCourse {
+public class ServiceGetList {
 
 	@Autowired
 	CourseDao courseDao;
@@ -24,17 +26,20 @@ public class GetCourse {
 	TagDao tagDao;
 
 	@Autowired
-	CourseModel courseModel;
+	CourseListModel courseListModel;
 
-	public List<CourseModel> getCourseListByTagName(String name) {
-
+	public Map<String,Object> getCourseListByTagName(String name, int pagecount) {
+		Map<String,Object> map= new HashMap<>();
 		int tagId = tagDao.getIdByName(name);
-		List<Ykt_course> list = courseDao.getListByTagId(tagId);
-		List<CourseModel> list1 = new ArrayList<>();
+		Page<Ykt_course> page = courseDao.getPageByTagId(tagId,pagecount);
+		List<Ykt_course> list = page.getRecords();
+		List<CourseListModel> list1 = new ArrayList<>();
 		for (Ykt_course temp: list){
-			list1.add(courseModel.init(temp,tagDao));
+			list1.add(courseListModel.init(temp,tagDao));
 		}
-		return list1;
+		map.put("hasNextPage", page.hasNext());
+		map.put("data", list1);
+		return map;
 	}
 
 	public List<String> getCourseTagByParentTagName(String name){

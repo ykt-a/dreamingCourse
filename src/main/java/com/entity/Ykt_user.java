@@ -23,4 +23,5 @@ public class Ykt_user {
 	private Date createTime;
 	private Date updateTime;
 	private int isAlive;
+	private String courseId;
 }

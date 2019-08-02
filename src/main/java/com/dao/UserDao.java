@@ -7,6 +7,7 @@ import com.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Repository
@@ -23,4 +24,8 @@ public class UserDao {
 		return userMapper.selectById(i);
 	}
 
+	public List<String> getCourseListByUid(int id){
+		String string = userMapper.selectById(id).getCourseId();
+		return Arrays.asList(string.split("-"));
+	}
 }
