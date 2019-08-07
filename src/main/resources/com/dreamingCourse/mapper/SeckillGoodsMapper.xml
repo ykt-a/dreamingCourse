@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dreamingCourse.mapper.SeckillGoodsMapper" >
+
+  <resultMap id="GoodsResultMap" type="com.dreamingCourse.entity.SeckillGoods" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="origin_price" property="originPrice" jdbcType="DECIMAL" />
+    <result column="pic" property="pic" jdbcType="VARCHAR" />
+    <result column="number" property="number" jdbcType="INTEGER" />
+    <result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="is_alive" property="isAlive" jdbcType="INTEGER" />
+    <result column="desc" property="desc" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="getTodayGoodsByTime" resultMap="GoodsResultMap" parameterType="int">
+      select * from  ykt_seckill_goods where start_day =  date_format(now(),'%y-%m-%d') and  start_time = #{startTime}
+  </select>
+
+  <update id="decreaseNum" parameterType="int">
+    update ykt_seckill_goods set number = number-1 where id = #{GID}
+  </update>
+
+    <select id="getCourseID" parameterType="int" resultType="int">
+        select  CID from ykt_seckill_goods where id = #{GID}
+    </select>
+
+    <select id="getCoursePrice" parameterType="int" resultType="DECIMAL">
+        select price from ykt_seckill_goods where id = #{GID}
+    </select>
+
+
+
+
+
+
+</mapper>
