@@ -3,6 +3,7 @@ package com.dreamingCourse.entity;
 import java.math.BigDecimal;
 
 public class OrderItem {
+
     private Integer id;
 
     private Integer courseId;
@@ -21,13 +22,16 @@ public class OrderItem {
 
 
 
+
     public Integer getId() {
         return id;
     }
 
+
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     public Integer getCourseId() {
         return courseId;
@@ -37,6 +41,7 @@ public class OrderItem {
         this.courseId = courseId;
     }
 
+
     public Long getOrderNumber() {
         return orderNumber;
     }
@@ -45,33 +50,41 @@ public class OrderItem {
         this.orderNumber = orderNumber;
     }
 
+
     public BigDecimal getCurrentUnitPrice() {
         return currentUnitPrice;
     }
+
 
     public void setCurrentUnitPrice(BigDecimal currentUnitPrice) {
         this.currentUnitPrice = currentUnitPrice;
     }
 
+
     public Integer getQuantity() {
         return quantity;
     }
+
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
+
     public Integer getIsAlive() {
         return isAlive;
     }
+
 
     public void setIsAlive(Integer isAlive) {
         this.isAlive = isAlive;
     }
 
+
     public Integer getUserId() {
         return userId;
     }
+
 
     public void setUserId(Integer userId) {
         this.userId = userId;
@@ -98,4 +111,5 @@ public class OrderItem {
                 ", courseName='" + courseName + '\'' +
                 '}';
     }
+
 }

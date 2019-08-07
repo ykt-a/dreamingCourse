@@ -2,6 +2,7 @@ package com.dreamingCourse.mapper;
 
 import com.dreamingCourse.entity.PayInfo;
 
+
 public interface PayInfoMapper {
 
     int insert(PayInfo record);
@@ -22,3 +23,4 @@ public interface PayInfoMapper {
     int updateByPrimaryKeySelective(YktPayInfo record);
 
     int updateByPrimaryKey(YktPayInfo record);*/
+

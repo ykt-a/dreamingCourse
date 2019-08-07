@@ -1,5 +1,6 @@
 package com.dreamingCourse.entity;
 
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -26,57 +27,71 @@ public class Cart {
 
     private BigDecimal total;
 
+
     public Integer getId() {
         return id;
     }
+
 
     public void setId(Integer id) {
         this.id = id;
     }
 
+
     public Integer getUserId() {
         return userId;
     }
+
 
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
+
     public Integer getCourseId() {
         return courseId;
     }
+
 
     public void setCourseId(Integer courseId) {
         this.courseId = courseId;
     }
 
+
     public Integer getQuantity() {
         return quantity;
     }
+
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
+
     public Date getCreateTime() {
         return createTime;
     }
+
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
+
     public Integer getStatus() {
         return status;
     }
+
 
     public void setStatus(Integer status) {
         this.status = status;
     }
 
+
     public Integer getIsAlive() {
         return isAlive;
     }
+
 
     public void setIsAlive(Integer isAlive) {
         this.isAlive = isAlive;
@@ -130,4 +145,5 @@ public class Cart {
                 ", total=" + total +
                 '}';
     }
+
 }

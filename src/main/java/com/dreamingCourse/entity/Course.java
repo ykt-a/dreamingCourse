@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class Course {
+
     private Integer id;
 
     private Integer tagId;
@@ -26,29 +27,37 @@ public class Course {
 
     private Integer isAlive;
 
+
     public Integer getId() {
         return id;
     }
+
+
 
     public void setId(Integer id) {
         this.id = id;
     }
 
+
     public Integer getTagId() {
         return tagId;
     }
+
 
     public void setTagId(Integer tagId) {
         this.tagId = tagId;
     }
 
+
     public String getName() {
         return name;
     }
 
+
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
     }
+
 
     public String getSubtitle() {
         return subtitle;
@@ -58,45 +67,56 @@ public class Course {
         this.subtitle = subtitle == null ? null : subtitle.trim();
     }
 
+
     public String getMainImage() {
         return mainImage;
     }
+
 
     public void setMainImage(String mainImage) {
         this.mainImage = mainImage == null ? null : mainImage.trim();
     }
 
+
     public Long getActivityPrice() {
         return activityPrice;
     }
+
 
     public void setActivityPrice(Long activityPrice) {
         this.activityPrice = activityPrice;
     }
 
+
     public BigDecimal getPrice() {
         return price;
     }
+
 
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
+
     public Date getCreateTime() {
         return createTime;
     }
+
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
+
     public Date getUpdateTime() {
         return updateTime;
     }
 
+
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
 
     public Integer getStatus() {
         return status;
@@ -106,6 +126,7 @@ public class Course {
         this.status = status;
     }
 
+
     public Integer getIsAlive() {
         return isAlive;
     }
@@ -113,4 +134,5 @@ public class Course {
     public void setIsAlive(Integer isAlive) {
         this.isAlive = isAlive;
     }
+
 }

@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class Order {
+
     private Integer id;
 
     private Integer userId;
@@ -51,53 +52,66 @@ public class Order {
         this.totalPrice = totalPrice;
     }
 
+
     public Integer getId() {
         return id;
     }
+
 
     public void setId(Integer id) {
         this.id = id;
     }
 
+
     public Integer getUserId() {
         return userId;
     }
+
 
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
+
     public BigDecimal getPayment() {
         return payment;
     }
+
 
     public void setPayment(BigDecimal payment) {
         this.payment = payment;
     }
 
+
     public Integer getPayType() {
         return payType;
     }
+
 
     public void setPayType(Integer payType) {
         this.payType = payType;
     }
 
+
     public Integer getStatus() {
         return status;
     }
+
 
     public void setStatus(Integer status) {
         this.status = status;
     }
 
+
     public Integer getIsAssess() {
         return isAssess;
     }
 
+
     public void setIsAssess(Integer isAssess) {
         this.isAssess = isAssess;
     }
+
 
     public Date getPayTime() {
         return payTime;
@@ -107,33 +121,41 @@ public class Order {
         this.payTime = payTime;
     }
 
+
     public Date getSendTime() {
         return sendTime;
     }
+
 
     public void setSendTime(Date sendTime) {
         this.sendTime = sendTime;
     }
 
+
     public Date getEndTime() {
         return endTime;
     }
+
 
     public void setEndTime(Date endTime) {
         this.endTime = endTime;
     }
 
+
     public Date getCloseTime() {
         return closeTime;
     }
+
 
     public void setCloseTime(Date closeTime) {
         this.closeTime = closeTime;
     }
 
+
     public Date getCreateTime() {
         return createTime;
     }
+
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
@@ -143,13 +165,16 @@ public class Order {
         return updateTime;
     }
 
+
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
+
     public Integer getIsAlive() {
         return isAlive;
     }
+
 
     public void setIsAlive(Integer isAlive) {
         this.isAlive = isAlive;
@@ -161,5 +186,6 @@ public class Order {
 
     public void setOrderNumber(Long orderNumber) {
         this.orderNumber = orderNumber;
+
     }
 }
