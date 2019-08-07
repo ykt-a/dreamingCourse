@@ -1,0 +1,155 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dreamingCourse.mapper.OrderMapper">
+
+    <resultMap id="aaa" type="com.dreamingCourse.entity.Order" >
+            <id column="id" property="id" jdbcType="INTEGER" />
+            <result column="user_id" property="userId" jdbcType="INTEGER" />
+            <result column="payment" property="payment" jdbcType="DECIMAL" />
+            <result column="pay_type" property="payType" jdbcType="INTEGER" />
+            <result column="status" property="status" jdbcType="INTEGER" />
+            <result column="is_assess" property="isAssess" jdbcType="INTEGER" />
+            <result column="pay_time" property="payTime" jdbcType="TIMESTAMP" />
+            <result column="send_time" property="sendTime" jdbcType="TIMESTAMP" />
+            <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+            <result column="close_time" property="closeTime" jdbcType="TIMESTAMP" />
+            <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+            <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+            <result column="is_alive" property="isAlive" jdbcType="INTEGER" />
+            <result column="order_number" property="orderNumber" jdbcType="BIGINT" />
+            <result column="is_kill" property="isKill" jdbcType="INTEGER" />
+            <result column="total_price" property="totalPrice" jdbcType="DECIMAL" />
+    </resultMap>
+
+    <resultMap id="bbb" type="com.dreamingCourse.entity.OrderVo">
+        <result column="user_id" property="userId" jdbcType="INTEGER" />
+        <result column="pay_type" property="payType" jdbcType="INTEGER" />
+        <result column="status" property="status" jdbcType="INTEGER" />
+        <result column="is_assess" property="isAssess" jdbcType="INTEGER" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="pay_time" property="payTime" jdbcType="TIMESTAMP" />
+        <result column="order_number" property="orderNumber"  jdbcType="INTEGER"/>
+        <result column="total_price" property="totalPrice" jdbcType="DECIMAL" />
+        <association column="user_id" property="user" select="selectUserByUid" ></association>
+        <collection property="orderItemList" select="getAllItemsByNo" column="order_number"></collection>
+    </resultMap>
+
+
+    <resultMap id="ItemsMap" type="com.dreamingCourse.entity.OrderItemVo" >
+        <result column="current_unit_price" property="currentUnitPrice" jdbcType="DECIMAL" />
+        <result column="quantity" property="quantity" jdbcType="INTEGER" />
+        <result column="order_number" property="orderNumber"  jdbcType="INTEGER"/>
+        <result column="course_id" property="courseId"  jdbcType="INTEGER"/>
+        <association column="course_id" property="course" select="getCourseName" ></association>
+    </resultMap>
+
+
+    <resultMap id="CourseMap" type="com.dreamingCourse.entity.Course" >
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="main_image" property="mainImage" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+          user_id, payment, pay_type, status, is_assess,create_time, pay_time, is_alive,order_number,total_price
+  </sql>
+
+
+    <insert id="insertOrder" parameterType="com.dreamingCourse.entity.Order">
+       insert into ykt_order (id, user_id, payment,
+       pay_time,order_number, is_kill,total_price,create_time)
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{payment,jdbcType=DECIMAL},
+     #{payTime,jdbcType=TIMESTAMP},  #{orderNumber,jdbcType=BIGINT}, #{isKill,jdbcType=INTEGER},
+      #{totalPrice,jdbcType=DECIMAL},now())
+</insert>
+    <select id="selectCarts" resultMap="aaa" parameterType="Integer">
+        select
+        <include refid="Base_Column_List" />
+        from ykt_order
+        where user_id = #{userId,jdbcType=INTEGER}
+    </select>
+
+    <select id="selectByOrderNo2" resultMap="bbb" parameterType="long">
+        select
+      user_id, payment, pay_type, status, is_assess,create_time, pay_time, is_alive,order_number,total_price    from ykt_order
+        where order_number = #{orderNumber}
+    </select>
+
+    <select id="getAllItemsByNo" resultMap="ItemsMap" parameterType="long">
+     select course_id,current_unit_price,quantity, course_name,order_number from ykt_order_item where  order_number = #{orderNumber}
+    </select>
+
+    <select id="selectUserByUid" resultType="com.dreamingCourse.entity.User" parameterType="int">
+     select  username,phone   from  ykt_user where id = #{userId,jdbcType=INTEGER}
+   </select>
+
+
+    <select id="getCourseName" resultMap="CourseMap" parameterType="int">
+     select
+     name,main_image from ykt_course where id = #{courseId,jdbcType=INTEGER}
+   </select>
+
+    <select id="findAllOrder" resultMap="aaa" >
+      select
+       user_id, payment, pay_type, status, is_assess,create_time, pay_time, is_alive,order_number,total_price    from ykt_order
+        where is_alive = 1
+</select>
+
+    <select id="findOrdersByUid" resultMap="bbb" parameterType="Integer">
+        select
+       user_id, payment, pay_type, status, is_assess,create_time, pay_time, is_alive,order_number,total_price
+        from ykt_order
+        where user_id = #{userId,jdbcType=INTEGER}
+   </select>
+
+    <select id="findUpaidOrderByUId" resultMap="bbb" parameterType="Integer">
+        select
+        <include refid="Base_Column_List" />
+        from ykt_order
+        where user_id = #{userId,jdbcType=INTEGER}  and status=0
+    </select>
+
+    <select id="findUAssessOrderByUId" resultMap="bbb" parameterType="Integer">
+    select
+    <include refid="Base_Column_List" />
+    from ykt_order
+    where user_id = #{userId,jdbcType=INTEGER} and is_assess=0
+</select>
+
+    <select id="findDetailsByUserIdAndorderNumber" resultMap="bbb" parameterType="map">
+        select
+        <include refid="Base_Column_List" />
+        from ykt_order
+        where user_id = #{userId} and order_number=#{orderNumber}
+    </select>
+
+    <select id="findByUserIdAndOrderNum" resultMap="aaa" parameterType="map">
+        select
+        <include refid="Base_Column_List" />
+        from ykt_order
+        where user_id = #{userId} and order_number=#{orderNumber}
+    </select>
+
+    <select id="selectByOrderNo" resultMap="bbb" parameterType="long">
+        select
+        <include refid="Base_Column_List" />
+        from ykt_order
+        where order_number = #{orderNumber}
+    </select>
+
+    <update id="updateByOrderNo" parameterType="long">
+     update ykt_order   set   status =1  where order_number = #{orderNumber}
+   </update>
+
+    <update id="closeFailureOrders" parameterType="long">
+     update ykt_order  set  status = 2   where order_number = #{orderNumber}
+   </update>
+
+    <delete id="deleteOrder" parameterType="Integer">
+        delete from  ykt_order where id=#{value}
+    </delete>
+
+</mapper>
+
