@@ -1,12 +1,10 @@
 package com.dreamingCourse.service.impl;
 
-import com.alipay.demo.trade.service.AlipayTradeService;
 import com.dreamingCourse.common.Const;
 import com.dreamingCourse.common.ServerResponse;
 import com.dreamingCourse.entity.*;
 import com.dreamingCourse.mapper.*;
 import com.dreamingCourse.service.OrderService;
-
 import com.dreamingCourse.utils.convert.DateTimeUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +33,7 @@ public class OrderServiceImp implements OrderService, Serializable {
     @Autowired
     private SeckillGoodsMapper seckillGoodsMapper;
 
-    private  AlipayTradeService tradeService;
+
 
 
     private static final Logger log = LoggerFactory.getLogger(OrderServiceImp.class);

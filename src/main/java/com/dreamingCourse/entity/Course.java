@@ -1,9 +1,16 @@
 package com.dreamingCourse.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Course {
+
+
+/*
+* 课程
+* */
+public class Course implements Serializable {
+    private static final long serialVersionUID = 8156432266603205928L;
 
     private Integer id;
 
@@ -77,11 +84,9 @@ public class Course {
         this.mainImage = mainImage == null ? null : mainImage.trim();
     }
 
-
     public Long getActivityPrice() {
         return activityPrice;
     }
-
 
     public void setActivityPrice(Long activityPrice) {
         this.activityPrice = activityPrice;
@@ -91,7 +96,6 @@ public class Course {
     public BigDecimal getPrice() {
         return price;
     }
-
 
     public void setPrice(BigDecimal price) {
         this.price = price;
@@ -133,6 +137,16 @@ public class Course {
 
     public void setIsAlive(Integer isAlive) {
         this.isAlive = isAlive;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", status=" + status +
+                '}';
     }
 
 }
