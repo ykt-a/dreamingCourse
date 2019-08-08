@@ -11,10 +11,7 @@ import com.model.CourseDetailModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class ServiceGetCourse {
@@ -42,12 +39,13 @@ public class ServiceGetCourse {
 
 	@Autowired
 	AssessDao assessDao;
+
 	/*
-	* 根据用户id和课程id查询课程详情
-	* */
+	 * 根据用户id和课程id查询课程详情
+	 * */
 	public CourseDetailModel getCourseDetailById(Integer userId, int courseId) {
 		//查询课程是否存活
-		if (courseDao.getById(courseId).getIsAlive()==0){
+		if (courseDao.getById(courseId).getIsAlive() == 0) {
 			return null;
 		}
 		//判断用户是否已购买此课程
@@ -68,38 +66,55 @@ public class ServiceGetCourse {
 	}
 
 	/*
-	* 获取课程全部的章节，包括视频链接
-	* */
-	public List<ChapterModel> getFullChapterByCourseId(int id){
+	 * 获取课程全部的章节，包括视频链接
+	 * */
+	public List<ChapterModel> getFullChapterByCourseId(int id) {
 		List<ChapterModel> chapterModels = new ArrayList<>();
 		List<Ykt_list> list = listDao.getByCourseId(id);
-		for (Ykt_list temp : list){
+		for (Ykt_list temp : list) {
 			chapterModels.add(ChapterModel.initAll(temp));
 		}
+		sortForChaperModels(chapterModels);
 		return chapterModels;
 	}
 
+	private void sortForChaperModels(List<ChapterModel> chapterModels) {
+		Collections.sort(chapterModels, new Comparator<ChapterModel>() {
+			@Override
+			public int compare(ChapterModel o1, ChapterModel o2) {
+				if (o1.getChapter() > o2.getChapter()) {
+					return 1;
+				} else if (o1.getChapter() == o2.getChapter()) {
+					return o1.getNode() > o2.getNode() ? 1 : (o1.getNode() == o2.getNode() ? 0 : -1);
+				} else  {
+					return -1;
+				}
+			}
+		});
+	}
+
 	/*
-	* 未购买课程的用户只能获得章节标题，没有视频链接
-	* */
-	public List<ChapterModel> getChapterByCourseId(int id){
+	 * 未购买课程的用户只能获得章节标题，没有视频链接
+	 * */
+	public List<ChapterModel> getChapterByCourseId(int id) {
 		List<ChapterModel> chapterModels = new ArrayList<>();
 		List<Ykt_list> list = listDao.getByCourseId(id);
-		for (Ykt_list temp : list){
+		for (Ykt_list temp : list) {
 			chapterModels.add(ChapterModel.init(temp));
 		}
+		sortForChaperModels(chapterModels);
 		return chapterModels;
 	}
 
 	/*
-	* 获取课程的评价
-	* */
-	public Map<String,Object> getCourseAssessByCourseId(int id,int pagecount){
-		Map<String,Object> map = new HashMap<>();
+	 * 获取课程的评价
+	 * */
+	public Map<String, Object> getCourseAssessByCourseId(int id, int pagecount) {
+		Map<String, Object> map = new HashMap<>();
 		Page page = assessDao.getListPageByCourseId(id, pagecount);
 		List<Ykt_assess> list = page.getRecords();
 		List<AssessModel> assessModels = new ArrayList<>();
-		for (Ykt_assess temp : list){
+		for (Ykt_assess temp : list) {
 			assessModels.add(AssessModel.init(temp));
 		}
 		map.put("data", assessModels);
