@@ -3,6 +3,9 @@ package com.dreamingCourse.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/*
+* 订单表
+* */
 public class Order {
 
     private Integer id;
@@ -11,7 +14,9 @@ public class Order {
 
     private BigDecimal payment;
 
+
     private BigDecimal totalPrice;
+
 
     private Integer payType;
 
@@ -32,6 +37,7 @@ public class Order {
     private Date updateTime;
 
     private Integer isAlive;
+
     private Integer isKill;
 
     private Long orderNumber;
@@ -53,14 +59,19 @@ public class Order {
     }
 
 
+
     public Integer getId() {
         return id;
     }
 
 
+
+
     public void setId(Integer id) {
         this.id = id;
     }
+
+
 
 
     public Integer getUserId() {
@@ -86,7 +97,6 @@ public class Order {
     public Integer getPayType() {
         return payType;
     }
-
 
     public void setPayType(Integer payType) {
         this.payType = payType;
@@ -126,7 +136,6 @@ public class Order {
         return sendTime;
     }
 
-
     public void setSendTime(Date sendTime) {
         this.sendTime = sendTime;
     }
@@ -165,7 +174,6 @@ public class Order {
         return updateTime;
     }
 
-
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
@@ -174,6 +182,7 @@ public class Order {
     public Integer getIsAlive() {
         return isAlive;
     }
+
 
 
     public void setIsAlive(Integer isAlive) {
@@ -189,3 +198,4 @@ public class Order {
 
     }
 }
+

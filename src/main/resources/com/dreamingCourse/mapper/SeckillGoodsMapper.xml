@@ -31,9 +31,4 @@
         select price from ykt_seckill_goods where id = #{GID}
     </select>
 
-
-
-
-
-
 </mapper>
