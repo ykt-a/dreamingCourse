@@ -48,6 +48,7 @@ public class ControllerGetList {
 	@RequestMapping("/getparentlist")
 	public String getParentList(HttpServletRequest request) {
 		String name = request.getParameter("name");
+		System.out.println(name);
 		String courseTagList;
 		if ((courseTagList=stringRedisTemplate.opsForValue().get("coursetaglist:"+name))!=null){
 			System.out.println("----getParentList 缓存----------");
