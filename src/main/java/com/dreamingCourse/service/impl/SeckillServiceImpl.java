@@ -40,27 +40,27 @@ public class SeckillServiceImpl implements SeckillService {
      */
     @Override
     public void addSecKillGoodsInRedis(SeckillGoods seckillGoods) {
-        Map<String,Object> goodsMap = new HashMap();
+        Map<String, Object> goodsMap = new HashMap();
 
-        goodsMap.put("id",seckillGoods.getId());
-        goodsMap.put("name",seckillGoods.getName());
-        goodsMap.put("price",seckillGoods.getPrice());
-        goodsMap.put("originPrice",seckillGoods.getOriginPrice());
-        goodsMap.put("pic",seckillGoods.getPic());
-        goodsMap.put("number",seckillGoods.getNumber());
-        goodsMap.put("startTime",seckillGoods.getStartTime());
-        goodsMap.put("createTime",seckillGoods.getCreateTime());
-        goodsMap.put("isAlive",seckillGoods.getIsAlive());
-        goodsMap.put("desc",seckillGoods.getDesc());
-        goodsMap.put("startDay",seckillGoods.getStartDay());
-        goodsMap.put("cid",seckillGoods.getStartDay());
+        goodsMap.put("id", seckillGoods.getId());
+        goodsMap.put("name", seckillGoods.getName());
+        goodsMap.put("price", seckillGoods.getPrice());
+        goodsMap.put("originPrice", seckillGoods.getOriginPrice());
+        goodsMap.put("pic", seckillGoods.getPic());
+        goodsMap.put("number", seckillGoods.getNumber());
+        goodsMap.put("startTime", seckillGoods.getStartTime());
+        goodsMap.put("createTime", seckillGoods.getCreateTime());
+        goodsMap.put("isAlive", seckillGoods.getIsAlive());
+        goodsMap.put("desc", seckillGoods.getDesc());
+        goodsMap.put("startDay", seckillGoods.getStartDay());
+        goodsMap.put("cid", seckillGoods.getStartDay());
 
         redisTemplate.setKeySerializer(new StringRedisSerializer());
 
         HashOperations hashOperations = redisTemplate.opsForHash();
-        String key = "goods_"+ Calendar.getInstance().getTime().getDate()+"_" +seckillGoods.getStartTime()+"_"+seckillGoods.getId();
+        String key = "goods_" + Calendar.getInstance().getTime().getDate() + "_" + seckillGoods.getStartTime() + "_" + seckillGoods.getId();
         System.out.println(key);
-        hashOperations.putAll(key,goodsMap);
+        hashOperations.putAll(key, goodsMap);
 
     }
 
@@ -72,8 +72,8 @@ public class SeckillServiceImpl implements SeckillService {
     public void addThisTimeGoodsToRedis(int time) {
         List<SeckillGoods> list = getTodayGoodsByTime(time);
         //加入缓存
-        if (null != list && list.size()>0){
-            for (int i = 0; i <list.size() ; i++) {
+        if (null != list && list.size() > 0) {
+            for (int i = 0; i < list.size(); i++) {
                 addSecKillGoodsInRedis(list.get(i));
             }
         }
@@ -97,7 +97,7 @@ public class SeckillServiceImpl implements SeckillService {
     @Override
     public void delYestodayGoodsFromRedis() {
         // 获取待删除的 key 值
-        String key = "goods_"+ (Calendar.getInstance().getTime().getDate()-1) + "*";
+        String key = "goods_" + (Calendar.getInstance().getTime().getDate() - 1) + "*";
         System.out.println(key);
         Set keys = redisTemplate.keys(key);
         System.out.println(keys.toString());
@@ -110,8 +110,8 @@ public class SeckillServiceImpl implements SeckillService {
     @Override
     public int getStockByGID(int GID, int time) {
         redisTemplate.setKeySerializer(new StringRedisSerializer());
-        String key = "goods_"+ Calendar.getInstance().getTime().getDate()+"_"+time+"_"+GID;
-        int num  = (Integer)redisTemplate.opsForHash().get(key,"number");
+        String key = "goods_" + Calendar.getInstance().getTime().getDate() + "_" + time + "_" + GID;
+        int num = (Integer) redisTemplate.opsForHash().get(key, "number");
         return num;
     }
 
@@ -123,22 +123,22 @@ public class SeckillServiceImpl implements SeckillService {
     @Override
     public void decreaseNum(int GID, int time) {
         redisTemplate.setKeySerializer(new StringRedisSerializer());
-        String key = "goods_"+ Calendar.getInstance().getTime().getDate()+"_"+time+"_"+GID;
+        String key = "goods_" + Calendar.getInstance().getTime().getDate() + "_" + time + "_" + GID;
 
-        System.out.println("######"+key);
+        System.out.println("######" + key);
 
-        int num  = (Integer)redisTemplate.opsForHash().get(key,"number");
-        redisTemplate.opsForHash().put(key,"number",num-1);
+        int num = (Integer) redisTemplate.opsForHash().get(key, "number");
+        redisTemplate.opsForHash().put(key, "number", num - 1);
     }
 
     @Override
     public boolean isBought(int UID, int time) {
-        String key = "User_"+ Calendar.getInstance().getTime().getDate()+"_"+time;
+        String key = "User_" + Calendar.getInstance().getTime().getDate() + "_" + time;
         //redisTemplate.setValueSerializer(new StringRedisSerializer());
         SetOperations setOperations = redisTemplate.opsForSet();
-        boolean res =  setOperations.isMember(key,UID);
-        if (res == false){
-            setOperations.add(key,UID);
+        boolean res = setOperations.isMember(key, UID);
+        if (res == false) {
+            setOperations.add(key, UID);
         }
         return res;
     }
@@ -146,7 +146,7 @@ public class SeckillServiceImpl implements SeckillService {
     @Override
     public void delUserSet() {
         // 获取待删除的 key 值
-        String key = "User_"+( Calendar.getInstance().getTime().getDate()-1)+"*";
+        String key = "User_" + (Calendar.getInstance().getTime().getDate() - 1) + "*";
         //String key = "goods_"+ (Calendar.getInstance().getTime().getDate()-1) + "*";
         System.out.println(key);
         Set keys = redisTemplate.keys(key);
@@ -155,10 +155,35 @@ public class SeckillServiceImpl implements SeckillService {
     }
 
     @Override
-    public void addUserToSet(int UID,int time) {
-        String key = "User_"+ Calendar.getInstance().getTime().getDate()+"_"+time;
+    public void addUserToSet(int UID, int time) {
+        String key = "User_" + Calendar.getInstance().getTime().getDate() + "_" + time;
         redisTemplate.setValueSerializer(new StringRedisSerializer());
         SetOperations setOperations = redisTemplate.opsForSet();
-        setOperations.add(key,UID);
+        setOperations.add(key, UID);
+    }
+
+    @Override
+    public SeckillGoods deleteByPrimaryKey(Long id) {
+        return seckillGoodsMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public SeckillGoods insert(SeckillGoods record) {
+        return seckillGoodsMapper.insert(record);
+    }
+
+    @Override
+    public SeckillGoods selectByPrimaryKey(Long id) {
+        return seckillGoodsMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<SeckillGoods> selectAll() {
+        return seckillGoodsMapper.selectAll();
+    }
+
+    @Override
+    public SeckillGoods updateByPrimaryKey(SeckillGoods record) {
+        return seckillGoodsMapper.updateByPrimaryKey(record);
     }
 }

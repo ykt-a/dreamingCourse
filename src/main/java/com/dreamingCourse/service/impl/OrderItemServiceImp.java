@@ -18,8 +18,33 @@ public class OrderItemServiceImp implements OrderItemService, Serializable {
 
     @Override
     public List<OrderItem> findItemByUserIdAndOrderNum(Integer userId, Long orderNumber) {
-        return OrderItemMapper.findItemByUserIdAndOrderNum(userId,orderNumber);
+        return OrderItemMapper.findItemByUserIdAndOrderNum(userId, orderNumber);
 
+    }
+
+    @Override
+    public OrderItem deleteByPrimaryKey(Integer id) {
+        return OrderItemMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public OrderItem insert(OrderItem record) {
+        return OrderItemMapper.insert(record);
+    }
+
+    @Override
+    public OrderItem selectByPrimaryKey(Integer id) {
+        return OrderItemMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<OrderItem> selectAll() {
+        return OrderItemMapper.selectAll();
+    }
+
+    @Override
+    public OrderItem updateByPrimaryKey(OrderItem record) {
+        return OrderItemMapper.updateByPrimaryKey(record);
     }
 
     /*@Override

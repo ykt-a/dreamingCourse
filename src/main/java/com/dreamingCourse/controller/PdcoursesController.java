@@ -15,8 +15,6 @@ public class PdcoursesController {
     @Autowired
     FpcoursesServieImp fpcoursesServieImp;
 
-
-
     @RequestMapping("/findpcouses")
     public @ResponseBody List<Course> findpcouses(Integer id){
         id=1;

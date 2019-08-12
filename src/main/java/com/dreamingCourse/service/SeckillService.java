@@ -27,22 +27,29 @@ public interface SeckillService {
     public void delYestodayGoodsFromRedis();
 
     // 查看当前秒杀商品的库存
-    public int getStockByGID(int GID,int time);
+    public int getStockByGID(int GID, int time);
 
     // 库存减一
-    public void decreaseNum(int GID,int time);
+    public void decreaseNum(int GID, int time);
 
     // 判断该用户是否已经购买过此商品
-    public boolean isBought(int UID,int time);
+    public boolean isBought(int UID, int time);
 
     // 删除昨天记录每个时间段已秒杀的用户的set
     public void delUserSet();
 
     // 添加当前用户到已秒杀用户set
-    public void addUserToSet(int UID,int time);
+    public void addUserToSet(int UID, int time);
 
+    SeckillGoods deleteByPrimaryKey(Long id);
 
+    SeckillGoods insert(SeckillGoods record);
 
+    SeckillGoods selectByPrimaryKey(Long id);
+
+    List<SeckillGoods> selectAll();
+
+    SeckillGoods updateByPrimaryKey(SeckillGoods record);
 
 
 }

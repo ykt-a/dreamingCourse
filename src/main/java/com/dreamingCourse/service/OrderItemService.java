@@ -6,7 +6,17 @@ import java.util.List;
 
 public interface OrderItemService {
 
-     List<OrderItem> findItemByUserIdAndOrderNum(Integer userId, Long orderNumber);
+    List<OrderItem> findItemByUserIdAndOrderNum(Integer userId, Long orderNumber);
+
+    OrderItem deleteByPrimaryKey(Integer id);
+
+    OrderItem insert(OrderItem record);
+
+    OrderItem selectByPrimaryKey(Integer id);
+
+    List<OrderItem> selectAll();
+
+    OrderItem updateByPrimaryKey(OrderItem record);
 }
 
 

@@ -148,5 +148,54 @@
         delete from  ykt_order where id=#{value}
     </delete>
 
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from ykt_order
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.dreamingCourse.entity.Order" >
+        insert into ykt_order (id, user_id, payment,
+        pay_type, status, is_assess,
+        pay_time, send_time, end_time,
+        close_time, create_time, update_time,
+        is_alive, order_number, is_kill,
+        total_price)
+        values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{payment,jdbcType=DECIMAL},
+        #{payType,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{isAssess,jdbcType=INTEGER},
+        #{payTime,jdbcType=TIMESTAMP}, #{sendTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP},
+        #{closeTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP},
+        #{isAlive,jdbcType=INTEGER}, #{orderNumber,jdbcType=BIGINT}, #{isKill,jdbcType=INTEGER},
+        #{totalPrice,jdbcType=DECIMAL})
+    </insert>
+    <update id="updateByPrimaryKey" parameterType="com.dreamingCourse.entity.Order" >
+        update ykt_order
+        set user_id = #{userId,jdbcType=INTEGER},
+        payment = #{payment,jdbcType=DECIMAL},
+        pay_type = #{payType,jdbcType=INTEGER},
+        status = #{status,jdbcType=INTEGER},
+        is_assess = #{isAssess,jdbcType=INTEGER},
+        pay_time = #{payTime,jdbcType=TIMESTAMP},
+        send_time = #{sendTime,jdbcType=TIMESTAMP},
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+        close_time = #{closeTime,jdbcType=TIMESTAMP},
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+        is_alive = #{isAlive,jdbcType=INTEGER},
+        order_number = #{orderNumber,jdbcType=BIGINT},
+        is_kill = #{isKill,jdbcType=INTEGER},
+        total_price = #{totalPrice,jdbcType=DECIMAL}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <select id="selectByPrimaryKey" resultMap="aaa" parameterType="java.lang.Integer" >
+        select id, user_id, payment, pay_type, status, is_assess, pay_time, send_time, end_time,
+        close_time, create_time, update_time, is_alive, order_number, is_kill, total_price
+        from ykt_order
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="selectAll" resultMap="aaa" >
+        select id, user_id, payment, pay_type, status, is_assess, pay_time, send_time, end_time,
+        close_time, create_time, update_time, is_alive, order_number, is_kill, total_price
+        from ykt_order
+    </select>
+
 </mapper>
 
