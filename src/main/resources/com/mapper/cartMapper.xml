@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mapper.cartMapper" >
+    <!--查一个人的有效订单-->
+    <select id="findSome" resultMap="sendcartmap" parameterType="Integer">
+        select   id,user_id,course_id,quantity,activity_price,price,create_time
+         from ykt_cart where user_id=#{userId} and status=1 and submission_status=0
+         order by create_time     </select>
+    <resultMap id="sendcartmap" type="com.entiy.sendCart">
+        <id  column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="course_id" property="courseId"/>
+        <result column="quantity" property="quantity"/>
+        <result column="activity_price" property="activityPrice"/>
+        <result column="price" property="price"/>
+        <result column="create_time" property="data"/>
+        <association property="courseName" column="course_id"  select="selectcourseById"/>
+        <association property="courseImage" column="course_id"  select="selectcourseById1"/>
+        <association property="image" column="user_id"  select="selectcourseById9"/>
+        <association property="userName" column="user_id"  select="selectcourseById8"/>
+        <association property="role" column="user_id"  select="selectcourseById7"/>
+    </resultMap>
+    <select id="selectcourseById" resultType="String" parameterType="int">
+        select name from  ykt_course where  id=#{course_id}
+    </select>
+    <select id="selectcourseById1" resultType="String" parameterType="int">
+        select sub_images from  ykt_course where  id=#{course_id}
+    </select>
+    <select id="selectcourseById7" resultType="int" parameterType="int">
+        select role from  ykt_user where  id=#{user_id}
+    </select>
+    <select id="selectcourseById8" resultType="String" parameterType="int">
+        select username from  ykt_user where  id=#{user_id}
+    </select>
+    <select id="selectcourseById9" resultType="String" parameterType="int">
+        select image from  ykt_user where  id=#{user_id}
+    </select>
+
+    <select id="findOne"  parameterType="com.entiy.cart" resultType="com.entiy.cart">
+         select * from ykt_cart where user_id=#{user_id} and  course_id=#{course_id}
+    </select>
+    <!--查提交的课程-->
+    <select id="findOrderByUserIdsubmissionStatus" resultType="com.entiy.cart" parameterType="Integer">
+        select * from ykt_cart where user_id=#{userId}  and  submission_status=1
+    </select>
+    <!--增加购物车-->
+    <insert id="insert" parameterType="com.entiy.cart">
+        insert into ykt_cart values (null,#{userId}, #{courseId},#{quantity},#{activityPrice},
+                  #{price},#{total}, #{createTime},#{status}, #{isAlive}, #{submissionStatus})
+    </insert>
+    <select id="findCourse" parameterType="int" resultType="com.entiy.course">
+        select  *   from ykt_course where id=#{id}
+    </select>
+    <select id="findUser" parameterType="int" resultType="com.entiy.user">
+        select  *   from ykt_course where id=#{id}
+    </select>
+    <update id="updatequantity" parameterType="com.entiy.cart">
+        update ykt_cart set quantity=#{quantity} where id=#{id}
+    </update>
+    <!--用户删除-->
+    <update id="updatstatus" parameterType="com.entiy.cart">
+        update ykt_cart set status=0 where user_id=#{user_id} and course_id=#{course_id}
+    </update>
+    <!--商品下架-->
+    <update id="updatesAlive" parameterType="com.entiy.cart">
+        update ykt_cart set is_alive=#{isAlive} where id=#{id}
+    </update>
+    <!--删除已提交-->
+    <update id="deletesubmited" parameterType="com.entiy.cart">
+        DELETE FROM ykt_cart where user_id=#{user_id} and course_id=#{course_id}
+    </update>
+    <!--改变已结算状态-->
+    <update id="updatesubmissionStatus" parameterType="com.entiy.cart">
+        update ykt_cart set submission_status=1 where user_id=#{user_id} and course_id=#{course_id}
+    </update>
+    <!--加入订单-->
+    <insert id="insertOeder"  parameterType="com.entiy.order">
+           insert into ykt_order values (null,#{userId}, #{payment},null,0,
+                  0,null, null,null, #{closeTime}, #{createTime},null,1,#{orderNumber})
+    </insert>
+    <!--加入订单详情-->
+    <insert id="insertOrderItem"  parameterType="com.entiy.orderItem">
+           insert into ykt_order_item values (null,#{courseId},
+           #{orderId},#{currentUnitPrice},#{quantity},#{isAlive} )
+    </insert>
+    <select id="selectByuserId" parameterType="int" resultType="com.entiy.cart">
+        select * from ykt_cart where user_id=#{id}
+    </select>
+    <!--找订单ID-->
+    <select id="fingOrderId" parameterType="Date" resultType="int">
+        select id  from ykt_order where create_time=#{createTime}
+    </select>
+    <update id="updateordertotal" parameterType="com.entiy.order">
+         update ykt_order set payment=#{payment} where id=#{id}
+    </update>
+</mapper>
+
