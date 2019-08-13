@@ -1,13 +1,9 @@
-package com.dreamingCourse.mapper;
-
+package com.dreamingCourse.service;
 import com.dreamingCourse.entity.*;
-import org.springframework.stereotype.Repository;
-
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-@Repository
-public interface CartMapper {
+public interface cartservice {
     List<Cart> findOrderByUserIdsubmissionStatus(Integer userid);
     List<sendCart> findSome(int b);
     Cart findOne(Map map);
@@ -27,16 +23,5 @@ public interface CartMapper {
     void updateordertotal(Order order);
 
 
-    //从购物车获取信息
-    List<Cart> selectByUid(Integer id);
 
-    Cart deleteByPrimaryKey(Integer id);
-
-    Cart insert(Cart record);
-
-    Cart selectByPrimaryKey(Integer id);
-
-    List<Cart> selectAll();
-
-    Cart updateByPrimaryKey(Cart record);
 }

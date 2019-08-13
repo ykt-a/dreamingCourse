@@ -1,9 +1,8 @@
-package com.dreamingCourse.entity.search;
+package com.dreamingCourse.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldIndex;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 @Document(indexName = SearchElastic.INDEX , type = SearchElastic.ORDER_TYPE)
@@ -13,11 +12,8 @@ public class SearchElastic {
     public static final String ORDER_TYPE = "_doc";
     @Id
     private  String id;
-    @Field(index = FieldIndex.analyzed, analyzer = "ik", searchAnalyzer = "ik", type = FieldType.String)
     private String name;
-    @Field(index = FieldIndex.analyzed, analyzer = "ik", searchAnalyzer = "ik", type = FieldType.String)
     private String subtitle;
-    @Field(index = FieldIndex.analyzed, analyzer = "ik", searchAnalyzer = "ik", type = FieldType.String)
     private String detail;
     private String main_images;
     @Field(type = FieldType.Double)
