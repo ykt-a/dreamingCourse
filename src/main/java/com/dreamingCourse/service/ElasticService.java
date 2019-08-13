@@ -1,6 +1,6 @@
-package com.dreamingCourse.service.search;
+package com.dreamingCourse.service;
 
-import com.dreamingCourse.entity.search.SearchElastic;
+import com.dreamingCourse.entity.SearchElastic;
 
 import java.util.List;
 

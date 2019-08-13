@@ -1,6 +1,6 @@
-package com.dreamingCourse.mapper.search;
+package com.dreamingCourse.mapper;
 
-import com.dreamingCourse.entity.search.SearchElastic;
+import com.dreamingCourse.entity.SearchElastic;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
