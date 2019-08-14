@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58d5483c-196d-4094-8572-db9560b3dad4" name="默认" comment="">
+      <change afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/_state/global-63.st" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/node.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alipay/config/AlipayConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/common/Const.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/common/ExceptionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/common/ResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/common/ServerResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/common/YktResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/ControllerGetCourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/ControllerGetList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/PdcoursesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/Search_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/SecKill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/ViCoursesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/cartCrontroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/dao/AssessDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/dao/CourseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/dao/ListDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/dao/TagDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/dao/TeacherDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Lists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Notice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/OrderItemVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/OrderVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/PayInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/ReceiveInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/SearchElastic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/SecKill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/SeckillGoods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/SuccessKilled.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_assess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_list.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_user.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/sendCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/yktUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/AssessMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/CartMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/CourseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/ElasticMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/Indexmapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/ListMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/ListsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/NoticeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/OrderItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/PayInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/PdcoursesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/ReceiveInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/SecKillMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/SeckillGoodsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/SuccessKilledMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/TagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/TeacherMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/ViewedCoursesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/ykt_UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/model/AssessModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/model/ChapterModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/model/CourseDetailModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/model/CourseListModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/model/TeacherModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/ElasticService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/FpcourseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/IndexService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/OrderItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/SeckillService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/ServiceGetCourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/ServiceGetList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/ViewedCoursesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/Ykt_UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/cartservice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/ElasticSearchImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/FpcoursesServieImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/IndexServiceimp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/OrderItemServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/OrderServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/SeckillServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/ViewedCoursesServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/cartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/ActiveMQ/ActiveMQConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/ActiveMQ/ActiveMQSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/Schedule/MyAdaptableJobFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/Schedule/QuartzConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/Schedule/QuartzJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/Schedule/TimingToRedis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/convert/DateTimeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/redis/RedisObjectSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/redis/RunOnceAtStart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/CourseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/ElasticMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/ListsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/NoticeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/OrderItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/PayInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/PdcoursesMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/ReceiveInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/SecKillMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/SeckillGoodsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/SuccessKilledMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/TagMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/TeacherMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/ViewedCoursesMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/indexmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/zfbinfo.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-sdk-java-3.3.0-source.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-sdk-java-3.3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-trade-sdk-20161215-source.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-trade-sdk-20161215.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RedisDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dreamingCourse/MySpringBootApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/dreamingCourse/ApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/dreamingCourse/OssControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OssControllerTest.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/dreamingCourse$ApplicationTest_contextLoads.ic" NAME="ApplicationTest.contextLoads Coverage Results" MODIFIED="1565430164746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.dreamingCourse.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/dreamingCourse$OssControllerTest_uploadFilePublic.ic" NAME="OssControllerTest.uploadFilePublic Coverage Results" MODIFIED="1565410438237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.dreamingCourse.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/dreamingCourse$OssControllerTest_fileTest.ic" NAME="OssControllerTest.fileTest Coverage Results" MODIFIED="1565430186919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.dreamingCourse.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="230" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1453218031">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.37" value="2" />
+          <entry key="project.open.time.38" value="3" />
+          <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="fxml" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="groovy" value="1" />
+          <entry key="html" value="6" />
+          <entry key="java" value="299" />
+          <entry key="kt" value="1" />
+          <entry key="properties" value="15" />
+          <entry key="xml" value="36" />
+          <entry key="yml" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Groovy" value="1" />
+          <entry key="HTML" value="6" />
+          <entry key="JAVA" value="299" />
+          <entry key="Kotlin" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="15" />
+          <entry key="XML" value="37" />
+          <entry key="YAML" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="19" />
+          <entry key="html" value="1" />
+          <entry key="java" value="10652" />
+          <entry key="properties" value="281" />
+          <entry key="xml" value="170" />
+          <entry key="yml" value="115" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="JAVA" value="10652" />
+          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="Properties" value="281" />
+          <entry key="XML" value="170" />
+          <entry key="YAML" value="115" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1227339243">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.1" value="6" />
+          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="12" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/ServiceGetCourse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1083">
+              <caret line="83" column="43" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-57">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/ElasticSearchImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="7" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/TagServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#709#710#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#877#878#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+                <element signature="e#984#985#0" expanded="true" />
+                <element signature="e#1043#1044#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/model/ChapterModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/SeckillGoodsMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/ElasticMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/Search_Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/ElasticService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>imageRealPath</find>
+      <find>mencoderpath</find>
+      <find>import java.util.ArrayList;</find>
+      <find>videofolder</find>
+      <find>endpoint</find>
+      <find>video_link</find>
+      <find>ffmpegpath</find>
+      <find>enctype</find>
+      <find>Current request is not a multipart request</find>
+      <find>os</find>
+      <find>zout</find>
+      <find>aliyunOSSUtil</find>
+      <find>RETURN_PATH</find>
+      <find>sourceVideoPath</find>
+      <find>targetExtension</find>
+      <find>filename</find>
+      <find>substring</find>
+      <find>targetfolder</find>
+      <find>v</find>
+      <find>WebApplicationContext</find>
+      <find>ElasticService</find>
+      <find>o1</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/CommonService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/OSSBootUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/AliyunOssProperties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/AliyunOssUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/puchasedcourses/YktList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/puchasedcourses/PdcoursesMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/dreamingCourse/mapper/course/YktListMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-generator/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/videoutils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/up.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/config/OSSConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/ossUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/ImgUpload.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/OSSUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/uploadFile.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/center.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/OssFileUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/OssController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/upload.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/AliyunOSSUtil0.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/AliyunOSSUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/AliyunOSSUtil0.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/application-dev.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/config/ConstantConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/config/ConstantProperties.java" />
+        <option value="$PROJECT_DIR$/src/test/ConverVideoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/AliyunOSSUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/config/ALiOSSConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/Contants.java" />
+        <option value="$PROJECT_DIR$/src/test/com/dreamingCourse/ApplicationContext.java" />
+        <option value="$PROJECT_DIR$/src/test/com/dreamingCourse/TmallApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/com/dreamingCourse/ApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/com/dreamingCourse/ApplicationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/com/dreamingCourse/MyJsonTests.java" />
+        <option value="$PROJECT_DIR$/src/test/com/dreamingCourse/MyControllerTests.java" />
+        <option value="$PROJECT_DIR$/src/test/com/dreamingCourse/UploadTest.java" />
+        <option value="$PROJECT_DIR$/src/test/test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/VideoUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/util/Video/VideoUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/com/dreamingCourse/OssControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/UpLoadController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/ElasticSearchImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/Search_Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/dao/AssessDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/AssessMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/TagServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamingCourse/MySpringBootApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="H:/apache-maven-3.6.1-bin/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="H:\apache-maven-3.6.1-bin\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="520" />
+    <option name="width" value="1100" />
+    <option name="height" value="835" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dreamingCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dreamingCourse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dreamingCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dreamingCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dreamingCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dreamingCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dreamingCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dreamingCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dreamingCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dreamingCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dreamingCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dreamingCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="dreamingCourse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dreamingCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dreamingCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565774279692" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\dreamingCourse\src\test\java" />
+      <recent name="D:\dreamingCourse\src\main\resources\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dreamingCourse\WebRoot\tools" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.dreamingCourse.mapper.transcoding" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dreamingCourse.App" />
+      <module name="dreamingCourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dreamingCourse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTest.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dreamingCourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dreamingCourse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dreamingCourse" />
+      <option name="MAIN_CLASS_NAME" value="com.dreamingCourse.ApplicationTest" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OssControllerTest.fileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dreamingCourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dreamingCourse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dreamingCourse" />
+      <option name="MAIN_CLASS_NAME" value="com.dreamingCourse.OssControllerTest" />
+      <option name="METHOD_NAME" value="fileTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OssControllerTest.uploadFilePublic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dreamingCourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dreamingCourse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dreamingCourse" />
+      <option name="MAIN_CLASS_NAME" value="com.dreamingCourse.OssControllerTest" />
+      <option name="METHOD_NAME" value="uploadFilePublic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="dreamingCourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dreamingCourse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dreamingCourse.MySpringBootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.ApplicationTest.contextLoads" />
+      <item itemvalue="JUnit.OssControllerTest.uploadFilePublic" />
+      <item itemvalue="JUnit.OssControllerTest.fileTest" />
+      <item itemvalue="Spring Boot.MySpringBootApplication" />
+      <item itemvalue="Application.App" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Spring Boot.MySpringBootApplication" />
+        <item itemvalue="JUnit.OssControllerTest.fileTest" />
+        <item itemvalue="JUnit.ApplicationTest.contextLoads" />
+        <item itemvalue="JUnit.OssControllerTest.uploadFilePublic" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58d5483c-196d-4094-8572-db9560b3dad4" name="默认" comment="" />
+      <created>1564403636846</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564403636846</updated>
+      <workItem from="1564403641684" duration="250000" />
+      <workItem from="1564403929819" duration="3810000" />
+      <workItem from="1564474584844" duration="1312000" />
+      <workItem from="1564535740302" duration="4964000" />
+      <workItem from="1564541510483" duration="15964000" />
+      <workItem from="1564623615385" duration="18935000" />
+      <workItem from="1564707490927" duration="3720000" />
+      <workItem from="1564711690259" duration="4791000" />
+      <workItem from="1564821613369" duration="20115000" />
+      <workItem from="1565095535345" duration="40308000" />
+      <workItem from="1565270544295" duration="62584000" />
+      <workItem from="1565429833311" duration="372000" />
+      <workItem from="1565443318022" duration="16000" />
+      <workItem from="1565451084658" duration="27000" />
+      <workItem from="1565451376836" duration="53000" />
+      <workItem from="1565590597858" duration="37000" />
+      <workItem from="1565590841550" duration="10000" />
+      <workItem from="1565591961176" duration="29000" />
+      <workItem from="1565596445427" duration="158000" />
+      <workItem from="1565598873958" duration="33000" />
+      <workItem from="1565598945791" duration="90000" />
+      <workItem from="1565599923074" duration="596000" />
+      <workItem from="1565601357103" duration="877000" />
+      <workItem from="1565687634992" duration="2429000" />
+      <workItem from="1565770063183" duration="920000" />
+      <workItem from="1565771219815" duration="1122000" />
+      <workItem from="1565772420600" duration="1683000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="OssControllerTest_uploadFilePublic - 2019.08.10 at 12h 14m 12s.xml">
+      <configuration name="OssControllerTest.uploadFilePublic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OssControllerTest_fileTest - 2019.08.10 at 13h 22m 13s.xml">
+      <configuration name="OssControllerTest.fileTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OssControllerTest_fileTest - 2019.08.10 at 13h 26m 32s.xml">
+      <configuration name="OssControllerTest.fileTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OssControllerTest_fileTest - 2019.08.10 at 13h 28m 30s.xml">
+      <configuration name="OssControllerTest.fileTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OssControllerTest_fileTest - 2019.08.10 at 13h 28m 45s.xml">
+      <configuration name="OssControllerTest.fileTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OssControllerTest_fileTest - 2019.08.10 at 13h 32m 02s.xml">
+      <configuration name="OssControllerTest.fileTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OssControllerTest_fileTest - 2019.08.10 at 13h 33m 18s.xml">
+      <configuration name="OssControllerTest.fileTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OssControllerTest_fileTest - 2019.08.10 at 13h 35m 43s.xml">
+      <configuration name="OssControllerTest.fileTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTest_contextLoads - 2019.08.10 at 17h 42m 58s.xml">
+      <configuration name="ApplicationTest.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OssControllerTest_fileTest - 2019.08.10 at 17h 43m 16s.xml">
+      <configuration name="OssControllerTest.fileTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="185205000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3036193" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="设计器" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32907802" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="调试" order="12" weight="0.32907802" />
+      <window_info anchor="bottom" id="Spring" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" visible="true" weight="0.22836879" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="调色板" order="3" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.38203752" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.3297587" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23391421" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="设计器" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32907802" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="调试" order="12" weight="0.32907802" />
+      <window_info anchor="bottom" id="Spring" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32907802" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="调色板" order="3" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/com/dreamingCourse/MyControllerTests.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/com/dreamingCourse/UploadTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/test.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.14.RELEASE/spring-test-4.3.14.RELEASE-sources.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.14.RELEASE/spring-test-4.3.14.RELEASE-sources.jar!/org/springframework/test/util/AssertionErrors.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/FpcourseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/puchasedcourses/YktUser.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/puchasedcourses/YktCourse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/order/Order.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/UpLoadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/Video/VideoUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/utils/Video/AliyunOSSUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/OssControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/cartCrontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/ControllerGetCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-917">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/ControllerGetList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/FpcoursesServieImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="20" selection-start-line="20" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/PdcoursesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="18" selection-start-line="18" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/dreamingCourse/ApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/TagMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Tag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/dao/AssessDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1216">
+          <caret line="86" lean-forward="true" selection-start-line="83" selection-start-column="3" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_assess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/yktUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-948">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_user.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_tag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Ykt_list.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/OrderItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2069">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/OrderVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/MySpringBootApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/entity/Notice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1577">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/AssessMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="366" column="21" selection-start-line="366" selection-start-column="21" selection-end-line="366" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/SeckillGoodsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/mapper/ElasticMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/controller/Search_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/ElasticService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/ElasticSearchImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="7" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/model/ChapterModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/impl/TagServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamingCourse/service/ServiceGetCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="83" column="43" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>dreamingCourse:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>dreamingCourse</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: c3p0:c3p0:0.9.1.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

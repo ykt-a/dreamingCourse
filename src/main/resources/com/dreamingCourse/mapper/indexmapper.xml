@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dreamingCourse.mapper.Indexmapper" >
+    <resultMap id="BaseResultMap" type="com.dreamingCourse.entity.Course" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="tag_id" property="tag_id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="subtitle" property="subtitle" jdbcType="VARCHAR" />
+        <result column="main_image" property="main_image" jdbcType="VARCHAR" />
+        <result column="activity_price" property="activity_price" jdbcType="DECIMAL" />
+        <result column="price" property="price" jdbcType="DECIMAL" />
+        <result column="create_time" property="create_time" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="update_time" jdbcType="TIMESTAMP" />
+        <result column="status" property="status" jdbcType="INTEGER" />
+        <result column="is_alive" property="is_alive" jdbcType="INTEGER" />
+    </resultMap>
+
+<!--模糊查询-->
+    <select id="search" resultType="com.dreamingCourse.entity.Course" parameterType="String">
+select * from ykt_course c where c.name like concat("%",#{mykey},"%")
+/*select name from ykt_course c where c.name like "%${mykey}%"*/
+    </select>
+ <!-- 最新上线-->
+    <select id="getlastCourse" resultMap="BaseResultMap" parameterType="String">
+        select c.id,c.name from ykt_course c order by id desc limit 10;
+    </select>
+    <!--课程推荐-->
+    <select id="gethotCourse" resultType="com.dreamingCourse.entity.Course" parameterType="com.dreamingCourse.entity.Course">
+       select * from ykt_course c INNER JOIN ykt_tag t ON c.tag_id=t.id where t.is_hot=2 order by rand() limit 10;
+    </select>
+    <!--实战推荐-->
+    <select id="getshiCourse" resultType="com.dreamingCourse.entity.Course" parameterType="com.dreamingCourse.entity.Course">
+       select * from ykt_course c where c.name like "%实战%" order by rand() limit 10;
+    </select>
+    <!--获取公告表-->
+    <select id="selectnotice" resultType="com.dreamingCourse.entity.Notice" parameterType="com.dreamingCourse.entity.Notice">
+       select * from notice limit 3;
+    </select>
+  <!--  <select id="getSeckill" resultType="com.dreamingCourse.entity.YktSeckill" parameterType="com.dreamingCourse.entity.YktSeckill">
+       select * from ykt_seckill limit 20;
+    </select>-->
+    <select id="gettag" resultType="com.dreamingCourse.entity.Course" parameterType="com.dreamingCourse.entity.Course">
+       select * from ykt_course c INNER  JOIN ykt_tag t on c.tag_id=t.id where t.parent_id=1;
+    /*    select t.id,t.name,c.main_image,c.name from ykt_course c INNER  JOIN ykt_tag t on c.tag_id=t.id where t.parent_id*/
+    </select>
+    <select id="getSeckil" resultType="com.dreamingCourse.entity.SecKill" parameterType="String">
+    select * from ykt_seckill where start_time=#{data2};
+    </select>
+    <!--where id>(#{pageNo}-1)*2 limit 2
+    (select IF ((#{pageNo})=2,start_time='2019-10-1 16:00:00',start_time='2019-10-1 20:00:00')-->
+    <!--select * from ykt_seckill where (select IF((#{pageNo})=1,start_time=,(select IF((#{pageNo})=2,start_time='2019-10-01 16:00:00',start_time='2019-10-01 20:00:00')));-->
+    <!--select * from ykt_seckill where (select IF((#{pageNo})=1,start_time='2019-10-1 10:00:00',start_time='2019-10-1 16:00:00'));
+     select * from ykt_seckill where ElT(#{pageNo},start_time='2019-10-1 10:00:00',start_time='2019-10-1 16:00:00',start_time='2019-10-1 20:00:00');-->
+</mapper>
