@@ -23,6 +23,10 @@ public class TeacherDao {
 	}
 
 	public Ykt_teacher getByCourseId(int id) {
-		return teacherMapper.selectOne(new QueryWrapper<Ykt_teacher>().eq(true, "cources_id", id));
+		QueryWrapper<Ykt_teacher> queryWrapper = new QueryWrapper<>();
+		queryWrapper.eq(true,"cources_id", id);
+		return teacherMapper.selectOne(queryWrapper);
 	}
+
+
 }

@@ -45,7 +45,7 @@ public class ServiceGetCourse {
 	 * */
 	public CourseDetailModel getCourseDetailById(Integer userId, int courseId) {
 		//查询课程是否存活
-		if (courseDao.getById(courseId).getIsAlive() == 0) {
+		if (courseDao.getById(courseId)==null||courseDao.getById(courseId).getIsAlive() == 0) {
 			return null;
 		}
 		//判断用户是否已购买此课程
@@ -57,8 +57,14 @@ public class ServiceGetCourse {
 				courseDetailModel.setIsBuy("true");
 			} else courseDetailModel.setIsBuy("false");
 		}
-		int teacherId = courseDao.getById(courseId).getTeacherId();
-
+		//int teacherId = courseDao.getById(courseId).getTeacherId();
+		int teacherId = 0;
+		try {
+			teacherId = teacherDao.getByCourseId(courseId).getId();
+		} catch (NullPointerException e) {
+			//课程存在但对应的老师不存在
+			return null;
+		}
 		Ykt_teacher teacher = teacherDao.getById(teacherId);
 		courseDetailModel.init(courseDao.getById(courseId), teacher, tagDao);
 
