@@ -78,20 +78,20 @@ public class ControllerGetCourse {
 	}
 
 	@RequestMapping("/getcourseassess")
-	public JSONArray getCourseAssess(HttpServletRequest request) {
+	public JSONObject getCourseAssess(HttpServletRequest request) {
 		int courseId = Integer.parseInt(request.getParameter("courseId"));
 		int page = Integer.parseInt(request.getParameter("page"));
 		String json;
 		List<AssessModel> assessModels;
 		if ((json = stringRedisTemplate.opsForValue().get("assess:courseId:" + courseId + ":page:" + page)) != null) {
 			System.out.println("----getCourseAssess 缓存----------");
-			return JSONArray.parseArray(json);
+			return JSONObject.parseObject(json);
 		}
 		Map map = serviceGetCourse.getCourseAssessByCourseId(courseId, page);
 		json = JSON.toJSONString(map);
 		stringRedisTemplate.opsForValue().set("assess:courseId:" + courseId + ":page:" + page, json, 5, TimeUnit.MINUTES);
 		System.out.println("----getCourseAssess 数据库----------");
 
-		return JSONArray.parseArray(json);
+		return JSONObject.parseObject(json);
 	}
 }
