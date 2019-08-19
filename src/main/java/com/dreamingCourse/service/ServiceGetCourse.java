@@ -50,12 +50,12 @@ public class ServiceGetCourse {
 		}
 		//判断用户是否已购买此课程
 		if (userId == null) {
-			courseDetailModel.setIsBuy("false");
+			courseDetailModel.setIsBuy(false);
 		} else {
 			List<String> coursesId = userDao.getCourseListByUid(userId.intValue());
 			if (coursesId.contains(String.valueOf(courseId))) {
-				courseDetailModel.setIsBuy("true");
-			} else courseDetailModel.setIsBuy("false");
+				courseDetailModel.setIsBuy(true);
+			} else courseDetailModel.setIsBuy(false);
 		}
 		//int teacherId = courseDao.getById(courseId).getTeacherId();
 		int teacherId = 0;
@@ -66,8 +66,11 @@ public class ServiceGetCourse {
 			return null;
 		}
 		Ykt_teacher teacher = teacherDao.getById(teacherId);
-		courseDetailModel.init(courseDao.getById(courseId), teacher, tagDao);
-
+		if (courseDetailModel.getIsBuy().equals(false)){
+			courseDetailModel.init(courseDao.getById(courseId), teacher, tagDao);
+		}else {
+			courseDetailModel.initAll(courseDao.getById(courseId), teacher, tagDao, listDao);
+		}
 		return courseDetailModel;
 	}
 

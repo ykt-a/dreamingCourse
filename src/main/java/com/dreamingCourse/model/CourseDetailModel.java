@@ -1,6 +1,7 @@
 package com.dreamingCourse.model;
 
 
+import com.dreamingCourse.dao.ListDao;
 import com.dreamingCourse.dao.TagDao;
 import com.dreamingCourse.entity.Ykt_course;
 import com.dreamingCourse.entity.Ykt_teacher;
@@ -20,10 +21,11 @@ public class CourseDetailModel {
 	private BigDecimal activityPrice;
 	private BigDecimal price;
 	private String tagName;
-	private String isBuy;
+	private Boolean isBuy;
 	private String tName;
 	private String tDesc;
 	private String tImage;
+	private String videoLink;
 
 	public void init(Ykt_course course, Ykt_teacher teacher, TagDao tagDao) {
 		this.name = course.getName();
@@ -37,5 +39,20 @@ public class CourseDetailModel {
 		this.tName = teacher.getTName();
 		this.tDesc = teacher.getTDesc();
 		this.tImage = teacher.getTImage();
+	}
+
+	public void initAll(Ykt_course course, Ykt_teacher teacher, TagDao tagDao, ListDao listDao){
+		this.name = course.getName();
+		this.subtitle = course.getSubtitle();
+		this.mainImage = course.getMainImage();
+		this.subImages = course.getSubImages();
+		this.detail = course.getDetail();
+		this.activityPrice = course.getActivityPrice();
+		this.price = course.getPrice();
+		this.tagName = tagDao.getTagNameById(course.getId());
+		this.tName = teacher.getTName();
+		this.tDesc = teacher.getTDesc();
+		this.tImage = teacher.getTImage();
+		this.videoLink = listDao.getById(course.getId()).getVideoLink();
 	}
 }

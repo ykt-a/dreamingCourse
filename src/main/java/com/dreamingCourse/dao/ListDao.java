@@ -28,4 +28,5 @@ public class ListDao {
 				.eq(true, "is_alive", 1);
 		return listMapper.selectList(queryWrapper);
 	}
+
 }
