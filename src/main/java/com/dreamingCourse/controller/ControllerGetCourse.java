@@ -10,6 +10,7 @@ import com.dreamingCourse.model.CourseDetailModel;
 import com.dreamingCourse.service.ServiceGetCourse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+@CrossOrigin
 @RestController
 public class ControllerGetCourse {
 

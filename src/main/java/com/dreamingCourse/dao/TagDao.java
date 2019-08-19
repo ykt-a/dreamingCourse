@@ -27,7 +27,7 @@ public class TagDao {
 	}
 
 	public String getTagNameById(int id) {
-		return tagMapper.selectOne(new QueryWrapper<Ykt_tag>().eq("id", id)).getName();
+		return tagMapper.selectOne(new QueryWrapper<Ykt_tag>().eq("id", id).eq("is_alive", 1)).getName();
 	}
 
 	public List<Ykt_tag> getTagNameByParentTagId(int id){
