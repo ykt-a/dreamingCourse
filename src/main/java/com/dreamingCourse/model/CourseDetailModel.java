@@ -26,6 +26,8 @@ public class CourseDetailModel {
 	private String tDesc;
 	private String tImage;
 	private String videoLink;
+	private String date;
+	private String startTime;
 
 	public void init(Ykt_course course, Ykt_teacher teacher, TagDao tagDao) {
 		this.name = course.getName();
